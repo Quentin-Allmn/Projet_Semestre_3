@@ -7,6 +7,9 @@ public class Draw : MonoBehaviour
 
     Coroutine drawing;
 
+    [SerializeField] float posZ = 4;
+
+   // private bool canDraw = false;
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -17,6 +20,7 @@ public class Draw : MonoBehaviour
         {
             FinishLine();
         }
+
     }
 
     void StartLine()
@@ -33,22 +37,28 @@ public class Draw : MonoBehaviour
         StopCoroutine(drawing);
     }
 
+
+
     IEnumerator DrawLine()
     {
         GameObject newGameObject = Instantiate(Resources.Load("Line") as GameObject, new Vector3(0, 0, 0), Quaternion.identity);
         LineRenderer line = newGameObject.GetComponent<LineRenderer>();
         line.positionCount = 0;
 
-        while (true)
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        //posZ = hit.transform.position.z + 10;
+
+        // while (true)
+       // if (hit.transform.gameObject.CompareTag("King"))
+       while(true)
         {
 
             Vector3 mousePos = Input.mousePosition;
-            mousePos.z = 4;
+            mousePos.z = posZ;
             Vector3 position = Camera.main.ScreenToWorldPoint(mousePos);
-           // Vector3 position = Input.mousePosition;
             Debug.Log("Position :" + position);
-            //position.x = +20;
-            //position.z = -7;
             line.positionCount++;
             line.SetPosition(line.positionCount - 1, position);
             Debug.Log(line.GetPosition(0));
@@ -57,6 +67,12 @@ public class Draw : MonoBehaviour
              //Debug.Log( Camera.main.ScreenToWorldPoint(Input.mousePosition));
             //Debug.Log("Position :" + position);
         }
+
+        //else
+        //{
+        //    canDraw = false;
+        //}
+
     }
 
 }
