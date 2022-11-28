@@ -42,13 +42,20 @@ public class Draw : MonoBehaviour
         while (true)
         {
 
-            Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            position.z = 0;
+            Vector3 mousePos = Input.mousePosition;
+            mousePos.z = 4;
+            Vector3 position = Camera.main.ScreenToWorldPoint(mousePos);
+           // Vector3 position = Input.mousePosition;
+            Debug.Log("Position :" + position);
+            //position.x = +20;
+            //position.z = -7;
             line.positionCount++;
             line.SetPosition(line.positionCount - 1, position);
+            Debug.Log(line.GetPosition(0));
             yield return null;
 
-            Debug.Log(position);
+             //Debug.Log( Camera.main.ScreenToWorldPoint(Input.mousePosition));
+            //Debug.Log("Position :" + position);
         }
     }
 
