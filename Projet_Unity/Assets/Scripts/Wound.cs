@@ -9,25 +9,35 @@ public class Wound : MonoBehaviour
     [SerializeField] Material onguent;
 
 
+    private bool isChanged = false;
+
+    MiniGame1Manager miniGame1Manager;
+
+    Onguent Onguent;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        miniGame1Manager = FindObjectOfType<MiniGame1Manager>();
+        Onguent = FindObjectOfType<Onguent>();
     }
 
     private void OnMouseOver()
     {
-
-        Debug.Log(gameObject.GetComponent<MeshRenderer>().material);
-
-        gameObject.GetComponent<MeshRenderer>().material = onguent;
-
-        if (gameObject.GetComponent<MeshRenderer>().material == wound)
+        if (isChanged == false && Onguent.isOintment == true )
         {
+            Onguent.counterOintment += 1;
+
+            isChanged = true;
+
             gameObject.GetComponent<MeshRenderer>().material = onguent;
-            Debug.Log("Change Material");
+
+            miniGame1Manager.woundCount += 1; 
+
+
         }
+
+
     }
 
     // Update is called once per frame

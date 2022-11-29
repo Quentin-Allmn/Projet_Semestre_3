@@ -5,17 +5,22 @@ using UnityEngine;
 public class MiniGame1Manager : MonoBehaviour
 {
 
-    Wound[] wound;
+    [SerializeField] public List<Wound> wounds = new List<Wound>();
+
+    public int woundCount = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        //wound = GameObject.FindGameObjectsWithTag("Wound");
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if ( woundCount >= 9)
+        {
+            Debug.Log("Victry");
+        }
     }
 }

@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class Onguent : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public bool isOintment = false;
+
+    public int counterOintment = 0;
+
+    private void OnMouseDown()
     {
-        
+
+        isOintment = true;
+        counterOintment = 0;
     }
 
-    // Update is called once per frame
-    void Update()
+
+    private void Update()
     {
-        
+        if (counterOintment > 5)
+        {
+            isOintment = false;
+        }
     }
 }

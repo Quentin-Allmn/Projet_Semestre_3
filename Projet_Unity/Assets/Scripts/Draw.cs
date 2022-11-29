@@ -46,7 +46,7 @@ public class Draw : MonoBehaviour
         line.positionCount = 0;
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
+       // RaycastHit hit;
 
         //posZ = hit.transform.position.z + 10;
 
