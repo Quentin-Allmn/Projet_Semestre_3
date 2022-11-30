@@ -26,6 +26,8 @@ public class MiniGame1Manager : MonoBehaviour
 
     private bool isWin = false;
 
+    public bool ispause = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,7 +46,12 @@ public class MiniGame1Manager : MonoBehaviour
             isWin = true;
         }
 
-        infection += Time.deltaTime;
+        if (ispause == false)
+        {
+
+            infection += Time.deltaTime;
+
+        }
 
         infection = Mathf.Clamp(infection, 0f, timeLeftInfection);
         float amount = (float)infection / timeLeftInfection;
