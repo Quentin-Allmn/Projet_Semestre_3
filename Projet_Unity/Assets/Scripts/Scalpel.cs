@@ -17,6 +17,7 @@ public class Scalpel : MonoBehaviour
     private void OnMouseOver()
     {
         isActive = true;
+        onguent.isOintment = false;
     }
 
     private void Update()

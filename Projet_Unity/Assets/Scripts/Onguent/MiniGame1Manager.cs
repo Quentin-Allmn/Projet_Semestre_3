@@ -18,17 +18,15 @@ public class MiniGame1Manager : MonoBehaviour
 
     public int woundCount = 0;
 
-    LoadLevel loadLevel;
 
     public float infection = 0f;
-    private float progress;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-        loadLevel = FindObjectOfType<LoadLevel>();
+        
     }
 
     // Update is called once per frame

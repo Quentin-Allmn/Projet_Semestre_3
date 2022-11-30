@@ -12,8 +12,11 @@ public class FractureSceneManager : MonoBehaviour
     [SerializeField] GameObject bones;
 
     [SerializeField] public List<Cut> listWounds = new List<Cut>();
+    [SerializeField] GameObject woundFinal;
+
 
     [SerializeField] Image victory;
+    [SerializeField] Image defeat;
 
     public bool bleedingPhase = false;
     public bool puzzlePhase = false;
@@ -22,6 +25,10 @@ public class FractureSceneManager : MonoBehaviour
 
     public int bleedingCount = 0;
     public int ointmentCount = 0;
+
+    [SerializeField] private float timeMax = 25f;
+    private float timeFracture;
+    [SerializeField] Image bar;
 
     Scalpel scalpel;
 
@@ -34,6 +41,8 @@ public class FractureSceneManager : MonoBehaviour
         scalpel = FindObjectOfType<Scalpel>();
         onguent = FindObjectOfType<Onguent>();
         bleedingPhase = true;
+
+        timeFracture = timeMax;
     }
 
     private void Update()
@@ -61,9 +70,11 @@ public class FractureSceneManager : MonoBehaviour
 
             kingLegOpened.gameObject.SetActive(false);
             slots.SetActive(false);
-            //KingLeg.SetActive(true);
+
+            woundFinal.SetActive(true);
         }
 
+        timeFracture -= Time.deltaTime;
 
 
 
@@ -72,7 +83,14 @@ public class FractureSceneManager : MonoBehaviour
             victory.gameObject.SetActive(true);
         }
 
+        if (timeFracture <= 0)
+        {
+            defeat.gameObject.SetActive(true);
+        }
 
+        timeFracture = Mathf.Clamp(timeFracture, 0, timeMax);
+        float amount = (float)timeFracture / timeMax;
+        bar.fillAmount = amount;
 
     }
 
