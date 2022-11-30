@@ -10,6 +10,8 @@ public class MiniGame1Manager : MonoBehaviour
 
     [SerializeField] int timeLeftInfection = 15;
 
+    [SerializeField] Image imageInfection;
+
     [SerializeField] Image victory;
     [SerializeField] Image defeat;
 
@@ -18,8 +20,9 @@ public class MiniGame1Manager : MonoBehaviour
     LoadLevel loadLevel;
 
     public float infection = 0f;
+    private float progress;
 
-    
+
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +41,11 @@ public class MiniGame1Manager : MonoBehaviour
         }
 
         infection += Time.deltaTime;
+
+        infection = Mathf.Clamp(infection, 0f, timeLeftInfection);
+        float amount = (float)infection / timeLeftInfection;
+        imageInfection.fillAmount = amount;
+
 
         if (infection >= timeLeftInfection)
         {

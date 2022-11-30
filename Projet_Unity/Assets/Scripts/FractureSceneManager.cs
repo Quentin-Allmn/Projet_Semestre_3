@@ -24,7 +24,6 @@ public class FractureSceneManager : MonoBehaviour
 
     Onguent onguent;
 
-    PuzzleManager puzzleManager;
 
     private void Awake()
     {

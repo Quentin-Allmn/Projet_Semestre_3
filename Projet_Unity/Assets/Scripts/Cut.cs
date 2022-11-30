@@ -12,7 +12,7 @@ public class Cut : MonoBehaviour
 
 
     private bool isWound = false;
-    private bool isOintment = false;
+  //  private bool isOintment = false;
 
     FractureSceneManager fractureSceneManager;
 
