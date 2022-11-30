@@ -21,7 +21,8 @@ public class MiniGame1Manager : MonoBehaviour
 
     public float infection = 0f;
 
-
+    [SerializeField] Text ointmentTxt;
+    public bool isOintmentText = false;
 
     // Start is called before the first frame update
     void Start()
@@ -51,6 +52,15 @@ public class MiniGame1Manager : MonoBehaviour
         {
             defeat.gameObject.SetActive(true);
             background.gameObject.SetActive(true);
+        }
+
+        if (isOintmentText == true)
+        {
+            ointmentTxt.gameObject.SetActive(true);
+        }
+        else if (isOintmentText == false)
+        {
+            ointmentTxt.gameObject.SetActive(false);
         }
 
     }

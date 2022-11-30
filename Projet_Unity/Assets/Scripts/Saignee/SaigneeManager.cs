@@ -16,6 +16,12 @@ public class SaigneeManager : MonoBehaviour
 
     [SerializeField] Text textBleeding;
 
+    [SerializeField] Material wood;
+    [SerializeField] Material flicker;
+
+    [SerializeField] GameObject bloodParticle1;
+    [SerializeField] GameObject bloodParticle2;
+
     public int bleedingCount = 0;
     public int ointmentCount = 0;
 
@@ -27,18 +33,24 @@ public class SaigneeManager : MonoBehaviour
     private float timeOintment;
     private float timeBleeding;
 
+    Onguent onguent;
+
     private void Start()
     {
         timeOintment = timeMax / 2;
         timeBleeding = timeMax;
 
+        onguent = FindObjectOfType<Onguent>();
+
     }
 
-
+    
 
     private void Update()
     {
         
+       
+
         if (bleedingCount == listBleeding.Count)
         {
             stockOintment.SetActive(true);
@@ -48,6 +60,7 @@ public class SaigneeManager : MonoBehaviour
         {
             ointmentFinished = true;
             victory.gameObject.SetActive(true);
+            bloodParticle2.SetActive(false);
         }
 
         if (bleedingCount > 0)
@@ -55,6 +68,7 @@ public class SaigneeManager : MonoBehaviour
 
             timeBleeding -= Time.deltaTime;
             Debug.Log("ca saigne");
+            bloodParticle1.SetActive(true);
 
         }
 
@@ -65,6 +79,14 @@ public class SaigneeManager : MonoBehaviour
             bleedingFinished = true;
             bar.color = new Color(255, 0, 0);
             textBleeding.text = "Heal";
+            onguent.GetComponentInChildren<MeshRenderer>().material = flicker;
+            bloodParticle2.SetActive(true);
+            bloodParticle1.SetActive(false);
+        }
+
+        if (timeBleeding < timeOintment - 0.5)
+        {
+            onguent.GetComponentInChildren<MeshRenderer>().material = wood;
         }
 
         if (timeBleeding <= 0)

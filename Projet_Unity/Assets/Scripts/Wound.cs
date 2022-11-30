@@ -15,11 +15,14 @@ public class Wound : MonoBehaviour
 
     Onguent Onguent;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
         miniGame1Manager = FindObjectOfType<MiniGame1Manager>();
         Onguent = FindObjectOfType<Onguent>();
+        miniGame1Manager.isOintmentText = false;
     }
 
     private void OnMouseOver()
@@ -32,11 +35,15 @@ public class Wound : MonoBehaviour
 
             gameObject.GetComponent<MeshRenderer>().material = onguent;
 
-            miniGame1Manager.woundCount += 1; 
+            miniGame1Manager.woundCount += 1;
 
-
+            miniGame1Manager.isOintmentText = false;
         }
 
+        if (Onguent.isOintment == false)
+        {
+            miniGame1Manager.isOintmentText = true;
+        }
 
     }
 
