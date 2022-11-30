@@ -36,6 +36,7 @@ public class FractureSceneManager : MonoBehaviour
 
     public int boneCounter = 0;
 
+    private bool isWin = false;
     private void Awake()
     {
         scalpel = FindObjectOfType<Scalpel>();
@@ -81,9 +82,10 @@ public class FractureSceneManager : MonoBehaviour
         if (ointmentCount == listWounds.Count)
         {
             victory.gameObject.SetActive(true);
+            isWin = true;
         }
 
-        if (timeFracture <= 0)
+        if (timeFracture <= 0 && isWin == false)
         {
             defeat.gameObject.SetActive(true);
         }

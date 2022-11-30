@@ -35,6 +35,8 @@ public class SaigneeManager : MonoBehaviour
 
     Onguent onguent;
 
+    private bool isWin = false;
+
     private void Start()
     {
         timeOintment = timeMax / 2;
@@ -61,6 +63,7 @@ public class SaigneeManager : MonoBehaviour
             ointmentFinished = true;
             victory.gameObject.SetActive(true);
             bloodParticle2.SetActive(false);
+            isWin = true;
         }
 
         if (bleedingCount > 0)
@@ -89,7 +92,7 @@ public class SaigneeManager : MonoBehaviour
             onguent.GetComponentInChildren<MeshRenderer>().material = wood;
         }
 
-        if (timeBleeding <= 0)
+        if (timeBleeding <= 0 && isWin == false)
         {
             defeat.gameObject.SetActive(true);
         }

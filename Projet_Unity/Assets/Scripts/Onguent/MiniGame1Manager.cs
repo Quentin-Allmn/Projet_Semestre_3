@@ -24,6 +24,8 @@ public class MiniGame1Manager : MonoBehaviour
     [SerializeField] Text ointmentTxt;
     public bool isOintmentText = false;
 
+    private bool isWin = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +41,7 @@ public class MiniGame1Manager : MonoBehaviour
 
             victory.gameObject.SetActive(true);
             background.gameObject.SetActive(true);
+            isWin = true;
         }
 
         infection += Time.deltaTime;
@@ -48,7 +51,7 @@ public class MiniGame1Manager : MonoBehaviour
         imageInfection.fillAmount = amount;
 
 
-        if (infection >= timeLeftInfection)
+        if (infection >= timeLeftInfection && isWin == false)
         {
             defeat.gameObject.SetActive(true);
             background.gameObject.SetActive(true);
