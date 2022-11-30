@@ -13,6 +13,15 @@ public class Bones : MonoBehaviour
 
     [SerializeField] private GameObject targetBone;
 
+    [SerializeField] Material visible;
+
+    FractureSceneManager fractureScene;
+
+    private void Awake()
+    {
+        fractureScene = FindObjectOfType<FractureSceneManager>();
+    }
+
     private void OnMouseDown()
     {
         isClicked = true;
@@ -37,28 +46,26 @@ public class Bones : MonoBehaviour
 
         else
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, 2.1f);
-
-            if (isSnap)
-            {
-                Debug.Log("pls");
-               //Vector3 newPos = targetBone.transform.position.y;
-            }
-
+            transform.position = new Vector3(transform.position.x, transform.position.y, 2.2f);
         }
 
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        isSnap = true;
-        //other.gameObject = targetBone;
-        Debug.Log(other.gameObject.transform);
-        
+        if (other.gameObject.tag == "BoneSlot")
+        {
+
+            gameObject.SetActive(false);
+            other.gameObject.GetComponent<MeshRenderer>().material = visible;
+            fractureScene.boneCounter += 1;
+        }
+
+
     }
 
     private void OnTriggerExit(Collider other)
     {
-        isSnap = false;
+        
     }
 }

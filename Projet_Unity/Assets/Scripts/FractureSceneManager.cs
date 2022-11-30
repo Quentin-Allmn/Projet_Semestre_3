@@ -24,6 +24,7 @@ public class FractureSceneManager : MonoBehaviour
 
     Onguent onguent;
 
+    public int boneCounter = 0;
 
     private void Awake()
     {
@@ -47,19 +48,24 @@ public class FractureSceneManager : MonoBehaviour
 
         }
 
-        if (puzzleCompleted == true)
+        if (boneCounter >= 3)
         {
             puzzlePhase = false;
             OintmentPhase = true;
 
-
-
+            kingLegOpened.gameObject.SetActive(false);
+            KingLeg.SetActive(true);
         }
+
+
+
 
         if (ointmentCount == listWounds.Count)
         {
             victory.gameObject.SetActive(true);
         }
+
+
 
     }
 

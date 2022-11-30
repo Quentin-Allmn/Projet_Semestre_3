@@ -12,6 +12,10 @@ public class SaigneeManager : MonoBehaviour
     [SerializeField] Image victory;
     [SerializeField] Image defeat;
 
+    [SerializeField] Image bar;
+
+    [SerializeField] Text textBleeding;
+
     public int bleedingCount = 0;
     public int ointmentCount = 0;
 
@@ -59,12 +63,18 @@ public class SaigneeManager : MonoBehaviour
         {
             Debug.Log("Faut Heal");
             bleedingFinished = true;
+            bar.color = new Color(255, 0, 0);
+            textBleeding.text = "Heal";
         }
 
         if (timeBleeding <= 0)
         {
             defeat.gameObject.SetActive(true);
-        } 
+        }
+
+        timeBleeding = Mathf.Clamp(timeBleeding, 0, timeMax);
+        float amount = (float)timeBleeding / timeMax;
+        bar.fillAmount = amount;
 
     }
 
