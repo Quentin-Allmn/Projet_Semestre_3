@@ -19,7 +19,7 @@ public class Onguent : MonoBehaviour
 
     private void Update()
     {
-        if (counterOintment > 5)
+        if (counterOintment > 4)
         {
             isOintment = false;
         }

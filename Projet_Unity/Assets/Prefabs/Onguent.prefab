@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7600832086416648286}
   - component: {fileID: 8911551307168995618}
   - component: {fileID: 8688459127688994655}
-  - component: {fileID: 1537020090970008800}
+  - component: {fileID: 7891105962802829566}
   m_Layer: 0
   m_Name: Onguent
   m_TagString: Untagged
@@ -84,8 +84,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &1537020090970008800
-CapsuleCollider:
+--- !u!135 &7891105962802829566
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -93,11 +93,10 @@ CapsuleCollider:
   m_GameObject: {fileID: 306356142933050720}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.55194765
+  m_Center: {x: 0.010397477, y: 0.6007035, z: 0.000000003756985}
 --- !u!1 &602222077960020708
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,7 +108,8 @@ GameObject:
   - component: {fileID: 4829497160674630867}
   - component: {fileID: 2730715143765596142}
   - component: {fileID: 7175748599871966128}
-  - component: {fileID: 4223440812654731088}
+  - component: {fileID: 7520738681716918582}
+  - component: {fileID: 6617273162025880834}
   m_Layer: 0
   m_Name: Onguent
   m_TagString: Untagged
@@ -183,8 +183,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &4223440812654731088
-CapsuleCollider:
+--- !u!65 &7520738681716918582
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -193,7 +193,20 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 2.8816, z: 1.0000004}
+  m_Center: {x: 0.00000005679497, y: 0.44079977, z: -0.00000010841675}
+--- !u!114 &6617273162025880834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602222077960020708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c7dc64fd4d653419c6d96e2eefd3d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOintment: 0
+  counterOintment: 0

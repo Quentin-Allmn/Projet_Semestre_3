@@ -10,11 +10,10 @@ public class GameManager : MonoBehaviour
 
     public int kingHealth = 100;
 
-    LoadLevel LoadLevel;
 
     private void Awake()
     {
-        LoadLevel = FindObjectOfType<LoadLevel>();
+        
     }
 
     // Start is called before the first frame update
@@ -26,17 +25,8 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (kingHealth <= 0)
-        {
-            Debug.Log("Game Over");
-            LoadLevel.LevelLoader(5);
-        }
 
-        if (mission3IsSucess == true)
-        {
-            Debug.Log("Victory");
-            LoadLevel.LevelLoader(5);
-        }
+
 
     }
 }
