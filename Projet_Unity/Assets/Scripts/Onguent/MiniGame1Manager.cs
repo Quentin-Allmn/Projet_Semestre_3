@@ -12,6 +12,7 @@ public class MiniGame1Manager : MonoBehaviour
 
     [SerializeField] Image imageInfection;
 
+    [SerializeField] Image background;
     [SerializeField] Image victory;
     [SerializeField] Image defeat;
 
@@ -38,6 +39,7 @@ public class MiniGame1Manager : MonoBehaviour
             Debug.Log("Victry");
 
             victory.gameObject.SetActive(true);
+            background.gameObject.SetActive(true);
         }
 
         infection += Time.deltaTime;
@@ -50,6 +52,7 @@ public class MiniGame1Manager : MonoBehaviour
         if (infection >= timeLeftInfection)
         {
             defeat.gameObject.SetActive(true);
+            background.gameObject.SetActive(true);
         }
 
     }
