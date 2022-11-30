@@ -8,7 +8,7 @@ public class FractureSceneManager : MonoBehaviour
     [SerializeField] GameObject kingLegOpened;
     [SerializeField] GameObject KingLeg;
 
-    [SerializeField] public List<Bleeding> listWounds = new List<Bleeding>();
+    [SerializeField] public List<Cut> listWounds = new List<Cut>();
 
     [SerializeField] Image victory;
 
@@ -44,7 +44,7 @@ public class FractureSceneManager : MonoBehaviour
                 listWounds[i].gameObject.SetActive(false);
             }
             KingLeg.SetActive(false);
-            //kingLegOpened.SetActive(true);
+            kingLegOpened.SetActive(true);
 
         }
 
