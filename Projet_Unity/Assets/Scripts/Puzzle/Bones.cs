@@ -9,7 +9,7 @@ public class Bones : MonoBehaviour
 
     private bool isClicked = false;
 
-    private bool isSnap = false;
+    private bool canTrigger = false;
 
     [SerializeField] private GameObject targetBone;
 
@@ -30,6 +30,7 @@ public class Bones : MonoBehaviour
     private void OnMouseUp()
     {
         isClicked = false;
+        canTrigger = true;
     }
 
     private void Update()
@@ -53,8 +54,9 @@ public class Bones : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "BoneSlot")
+        if (other.gameObject.tag == "BoneSlot" && canTrigger == true)
         {
+            Debug.Log("Trigger");
 
             gameObject.SetActive(false);
             other.gameObject.GetComponent<MeshRenderer>().material = visible;
