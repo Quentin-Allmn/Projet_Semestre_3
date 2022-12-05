@@ -17,6 +17,7 @@ public class FractureSceneManager : MonoBehaviour
 
     [SerializeField] Image victory;
     [SerializeField] Image defeat;
+    [SerializeField] GameObject cutLines;
 
     public bool bleedingPhase = false;
     public bool puzzlePhase = false;
@@ -37,6 +38,9 @@ public class FractureSceneManager : MonoBehaviour
     public int boneCounter = 0;
 
     private bool isWin = false;
+
+    public bool isPause = false;
+
     private void Awake()
     {
         scalpel = FindObjectOfType<Scalpel>();
@@ -56,10 +60,12 @@ public class FractureSceneManager : MonoBehaviour
             {
                 listWounds[i].gameObject.SetActive(false);
             }
+            cutLines.SetActive(false);
            // KingLeg.SetActive(false);
             kingLegOpened.SetActive(true);
             bones.SetActive(true);
             slots.SetActive(true);
+
 
 
         }
@@ -75,7 +81,10 @@ public class FractureSceneManager : MonoBehaviour
             woundFinal.SetActive(true);
         }
 
-        timeFracture -= Time.deltaTime;
+        if (isPause == false && isWin == false)
+        {
+            timeFracture -= Time.deltaTime;
+        }
 
 
 

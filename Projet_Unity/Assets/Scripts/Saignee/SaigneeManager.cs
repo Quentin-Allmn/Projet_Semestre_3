@@ -37,6 +37,7 @@ public class SaigneeManager : MonoBehaviour
 
     private bool isWin = false;
 
+    public bool isPause = false;
     private void Start()
     {
         timeOintment = timeMax / 2;
@@ -68,8 +69,10 @@ public class SaigneeManager : MonoBehaviour
 
         if (bleedingCount > 0)
         {
-
-            timeBleeding -= Time.deltaTime;
+            if(isWin == false && isPause == false)
+            {
+                timeBleeding -= Time.deltaTime;
+            }
             Debug.Log("ca saigne");
             bloodParticle1.SetActive(true);
 

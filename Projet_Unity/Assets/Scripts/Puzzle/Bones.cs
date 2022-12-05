@@ -46,6 +46,7 @@ public class Bones : MonoBehaviour
             Vector3 position = Camera.main.ScreenToWorldPoint(mousePos);
 
             transform.position = position;
+
         }
 
         else
@@ -71,8 +72,4 @@ public class Bones : MonoBehaviour
 
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        
-    }
 }

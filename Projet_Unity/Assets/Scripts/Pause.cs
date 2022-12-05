@@ -10,9 +10,15 @@ public class Pause : MonoBehaviour
 
     MiniGame1Manager MiniGame1Manager;
 
+    SaigneeManager saigneeManager;
+
+    FractureSceneManager fractureScene;
+
     private void Start()
     {
         MiniGame1Manager = FindObjectOfType<MiniGame1Manager>();
+        saigneeManager = FindObjectOfType<SaigneeManager>();
+        fractureScene = FindObjectOfType<FractureSceneManager>();
     }
 
     public void ShowPauseMenu()
@@ -25,6 +31,32 @@ public class Pause : MonoBehaviour
     {
         pauseMenu.gameObject.SetActive(false);
         MiniGame1Manager.ispause = false;
+    }
+
+
+    public void ShowPauseMenu2()
+    {
+        pauseMenu.gameObject.SetActive(true);
+        saigneeManager.isPause = true;
+    }
+
+    public void Back2()
+    {
+        pauseMenu.gameObject.SetActive(false);
+        saigneeManager.isPause = false;
+    }
+
+
+    public void ShowPauseMenu3()
+    {
+        pauseMenu.gameObject.SetActive(true);
+        fractureScene.isPause = true;
+    }
+
+    public void Back3()
+    {
+        pauseMenu.gameObject.SetActive(false);
+        fractureScene.isPause = false;
     }
 
 }
