@@ -13,6 +13,8 @@ public class SaigneeManager : MonoBehaviour
     [SerializeField] Image defeat;
 
     [SerializeField] Image bar;
+    [SerializeField] Image blood;
+    [SerializeField] Sprite redBar;
 
     [SerializeField] Text textBleeding;
 
@@ -83,7 +85,8 @@ public class SaigneeManager : MonoBehaviour
         {
             Debug.Log("Faut Heal");
             bleedingFinished = true;
-            bar.color = new Color(255, 0, 0);
+            bar.sprite = redBar;
+            blood.color = new Color(150, 0, 0);
             textBleeding.text = "Heal";
             onguent.GetComponentInChildren<MeshRenderer>().material = flicker;
             bloodParticle2.SetActive(true);
