@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 718258965990263874}
   - component: {fileID: 64030332461223416}
   - component: {fileID: 1531674706910369741}
+  - component: {fileID: 3399827797531574085}
   m_Layer: 0
   m_Name: Slot1
   m_TagString: BoneSlot
@@ -129,3 +130,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &3399827797531574085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718258965990263900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04143462be9d40b4ba09650191dd3ceb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  haveBone: 0

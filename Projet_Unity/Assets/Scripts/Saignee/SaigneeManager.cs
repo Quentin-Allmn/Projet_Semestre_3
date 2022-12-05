@@ -28,7 +28,7 @@ public class SaigneeManager : MonoBehaviour
     public bool bleedingFinished = false;
     public bool ointmentFinished = false;
 
-    private float timeMax = 25f;
+    [SerializeField] float timeMax = 25f;
     //private float timeMin = 0f;
     private float timeOintment;
     private float timeBleeding;

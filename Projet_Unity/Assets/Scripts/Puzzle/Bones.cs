@@ -17,9 +17,12 @@ public class Bones : MonoBehaviour
 
     FractureSceneManager fractureScene;
 
+    BoneSlot boneSlot;
+
     private void Awake()
     {
         fractureScene = FindObjectOfType<FractureSceneManager>();
+        boneSlot = FindObjectOfType<BoneSlot>();
     }
 
     private void OnMouseDown()
@@ -56,11 +59,13 @@ public class Bones : MonoBehaviour
     {
         if (other.gameObject.tag == "BoneSlot" && canTrigger == true)
         {
-            Debug.Log("Trigger");
-
-            gameObject.SetActive(false);
-            other.gameObject.GetComponent<MeshRenderer>().material = visible;
-            fractureScene.boneCounter += 1;
+            if (other.gameObject.GetComponent<BoneSlot>().haveBone == false)
+            {
+                other.gameObject.GetComponent<BoneSlot>().haveBone = true;
+                gameObject.SetActive(false);
+                other.gameObject.GetComponent<MeshRenderer>().material = visible;
+                fractureScene.boneCounter += 1;
+            }
         }
 
 
