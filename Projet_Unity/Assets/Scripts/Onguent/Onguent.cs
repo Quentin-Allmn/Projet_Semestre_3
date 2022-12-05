@@ -9,6 +9,11 @@ public class Onguent : MonoBehaviour
 
     public int counterOintment = 0;
 
+    private void Start()
+    {
+        
+    }
+
     private void OnMouseDown()
     {
 

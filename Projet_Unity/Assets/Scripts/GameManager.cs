@@ -6,27 +6,6 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
 
-    public bool mission3IsSucess = false;
-
-    public int kingHealth = 100;
 
 
-    private void Awake()
-    {
-        
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-
-
-    }
 }

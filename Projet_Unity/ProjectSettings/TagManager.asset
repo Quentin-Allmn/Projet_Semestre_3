@@ -8,6 +8,8 @@ TagManager:
   - Onguent
   - Wound
   - BoneSlot
+  - CutParticleEmiter
+  - CutParticleReceiver
   layers:
   - Default
   - TransparentFX

@@ -76,7 +76,7 @@ public class SaigneeManager : MonoBehaviour
                 timeBleeding -= Time.deltaTime;
             }
             Debug.Log("ca saigne");
-            bloodParticle1.SetActive(true);
+           // bloodParticle1.SetActive(true);
 
         }
 
@@ -89,8 +89,8 @@ public class SaigneeManager : MonoBehaviour
             blood.color = new Color(150, 0, 0);
             textBleeding.text = "Heal";
             onguent.GetComponentInChildren<MeshRenderer>().material = flicker;
-            bloodParticle2.SetActive(true);
-            bloodParticle1.SetActive(false);
+            //bloodParticle2.SetActive(true);
+            //bloodParticle1.SetActive(false);
         }
 
         if (timeBleeding < timeOintment - 0.5)
