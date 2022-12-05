@@ -17,7 +17,10 @@ public class FractureSceneManager : MonoBehaviour
 
     [SerializeField] Image victory;
     [SerializeField] Image defeat;
+
     [SerializeField] GameObject cutLines;
+
+    [SerializeField] GameObject pliers; 
 
     public bool bleedingPhase = false;
     public bool puzzlePhase = false;

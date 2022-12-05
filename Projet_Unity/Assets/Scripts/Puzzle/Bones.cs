@@ -19,10 +19,13 @@ public class Bones : MonoBehaviour
 
     BoneSlot boneSlot;
 
+    Pliers pliers;
+
     private void Awake()
     {
         fractureScene = FindObjectOfType<FractureSceneManager>();
         boneSlot = FindObjectOfType<BoneSlot>();
+        pliers = FindObjectOfType<Pliers>();
     }
 
     private void OnMouseDown()
@@ -38,7 +41,7 @@ public class Bones : MonoBehaviour
 
     private void Update()
     {
-        if (isClicked)
+        if (isClicked && pliers.isActive == true)
         {
 
             Vector3 mousePos = Input.mousePosition;

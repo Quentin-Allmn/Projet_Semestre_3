@@ -2,36 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Scalpel : MonoBehaviour
+public class Pliers : MonoBehaviour
 {
 
     public bool isActive = false;
 
     Onguent onguent;
 
-    Pliers pliers;
+    Scalpel scalpel;
 
     private void Start()
     {
         onguent = FindObjectOfType<Onguent>();
-        pliers = FindObjectOfType<Pliers>();
+        scalpel = FindObjectOfType<Scalpel>();
     }
 
     private void OnMouseOver()
     {
         isActive = true;
         onguent.isOintment = false;
-        pliers.isActive = false;
+        scalpel.isActive = false;
     }
 
     private void Update()
     {
-        if(onguent.isOintment == true)
+        if (onguent.isOintment == true)
         {
             isActive = false;
         }
 
-        if (pliers.isActive == true)
+        if (scalpel.isActive == true)
         {
             isActive = false;
         }
