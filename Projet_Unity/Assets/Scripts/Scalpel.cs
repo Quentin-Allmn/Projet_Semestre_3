@@ -9,19 +9,19 @@ public class Scalpel : MonoBehaviour
 
     Onguent onguent;
 
-    Pliers pliers;
+    //Pliers pliers;
 
     private void Start()
     {
         onguent = FindObjectOfType<Onguent>();
-        pliers = FindObjectOfType<Pliers>();
+        //pliers = FindObjectOfType<Pliers>();
     }
 
     private void OnMouseOver()
     {
         isActive = true;
         onguent.isOintment = false;
-        pliers.isActive = false;
+        //pliers.isActive = false;
     }
 
     private void Update()
@@ -31,10 +31,10 @@ public class Scalpel : MonoBehaviour
             isActive = false;
         }
 
-        if (pliers.isActive == true)
-        {
-            isActive = false;
-        }
+        //if (pliers.isActive == true)
+        //{
+        //    isActive = false;
+        //}
     }
 
 }
