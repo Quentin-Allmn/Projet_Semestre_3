@@ -5,7 +5,7 @@ using UnityEngine;
 public class Onguent : MonoBehaviour
 {
 
-    [SerializeField] Light light;
+    [SerializeField] Light lightOnguent;
 
     public bool isOintment = false;
 
@@ -21,7 +21,7 @@ public class Onguent : MonoBehaviour
 
         isOintment = true;
         counterOintment = 0;
-        light.gameObject.SetActive(false);
+        lightOnguent.gameObject.SetActive(false);
     }
 
 
@@ -30,7 +30,7 @@ public class Onguent : MonoBehaviour
         if (counterOintment > 5)
         {
             isOintment = false;
-            light.gameObject.SetActive(true);
+            lightOnguent.gameObject.SetActive(true);
         }
     }
 }

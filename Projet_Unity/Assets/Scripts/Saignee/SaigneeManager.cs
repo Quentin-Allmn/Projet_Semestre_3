@@ -21,8 +21,8 @@ public class SaigneeManager : MonoBehaviour
     [SerializeField] Material wood;
     [SerializeField] Material flicker;
 
-    [SerializeField] GameObject bloodParticle1;
-    [SerializeField] GameObject bloodParticle2;
+    //[SerializeField] GameObject bloodParticle1;
+    //[SerializeField] GameObject bloodParticle2;
 
     public int bleedingCount = 0;
     public int ointmentCount = 0;
@@ -70,7 +70,7 @@ public class SaigneeManager : MonoBehaviour
         {
             ointmentFinished = true;
             victory.gameObject.SetActive(true);
-            bloodParticle2.SetActive(false);
+            //bloodParticle2.SetActive(false);
             isWin = true;
         }
 
