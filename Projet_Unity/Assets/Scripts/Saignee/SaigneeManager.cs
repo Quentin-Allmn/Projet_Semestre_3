@@ -80,7 +80,7 @@ public class SaigneeManager : MonoBehaviour
             {
                 timeBleeding -= Time.deltaTime;
             }
-            Debug.Log("ca saigne");
+            //Debug.Log("ca saigne");
            // bloodParticle1.SetActive(true);
 
         }
@@ -88,7 +88,7 @@ public class SaigneeManager : MonoBehaviour
 
         if (timeBleeding < timeOintment)
         {
-            Debug.Log("Faut Heal");
+            //Debug.Log("Faut Heal");
             bleedingFinished = true;
             bar.sprite = redBar;
             blood.color = new Color(150, 0, 0);
