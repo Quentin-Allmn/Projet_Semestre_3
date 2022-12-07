@@ -38,6 +38,8 @@ public class FractureSceneManager : MonoBehaviour
 
     Onguent onguent;
 
+    CutSign cutSign;
+
     public int boneCounter = 0;
 
     private bool isWin = false;
@@ -49,8 +51,16 @@ public class FractureSceneManager : MonoBehaviour
         scalpel = FindObjectOfType<Scalpel>();
         onguent = FindObjectOfType<Onguent>();
         bleedingPhase = true;
+        cutSign = FindObjectOfType<CutSign>();
 
         timeFracture = timeMax;
+
+    }
+
+    private void Start()
+    {
+        cutSign.canFire = true;
+        cutSign.destructionDelay = 0.4f;
     }
 
     private void Update()
@@ -58,6 +68,7 @@ public class FractureSceneManager : MonoBehaviour
         if (bleedingCount == listWounds.Count)
         {
             bleedingPhase = false;
+            cutSign.canFire = false;
             puzzlePhase = true;
             for (int i = 0; i < listWounds.Count; i++)
             {

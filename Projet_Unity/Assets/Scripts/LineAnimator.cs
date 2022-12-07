@@ -24,19 +24,25 @@ public class LineAnimator : MonoBehaviour
         Vector3 endPosition = lineRenderer.GetPosition(1);
 
         Vector3 pos = startPosition;
+
         while (pos != endPosition)
         {
             float t = (Time.time - startTime) / animationDuration;
             pos = Vector3.Lerp(startPosition, endPosition, t);
             lineRenderer.SetPosition(1, pos);
 
-            yield return null;
+            if(t>= 1f)
+            {
+                lineRenderer.SetPosition(0, pos);
+            }
+
+            yield return new WaitForSeconds(0.01f);
         }
 
     }
 
     void Update()
     {
-        
+
     }
 }

@@ -37,6 +37,8 @@ public class SaigneeManager : MonoBehaviour
 
     Onguent onguent;
 
+    CutSign cutSign;
+
     private bool isWin = false;
 
     public bool isPause = false;
@@ -47,6 +49,8 @@ public class SaigneeManager : MonoBehaviour
 
         onguent = FindObjectOfType<Onguent>();
 
+        cutSign = FindObjectOfType<CutSign>();
+        cutSign.canFire = true;
     }
 
     
@@ -59,6 +63,7 @@ public class SaigneeManager : MonoBehaviour
         if (bleedingCount == listBleeding.Count)
         {
             stockOintment.SetActive(true);
+            cutSign.canFire = false;
         }
 
         if (ointmentCount == listBleeding.Count)
@@ -89,6 +94,7 @@ public class SaigneeManager : MonoBehaviour
             blood.color = new Color(150, 0, 0);
             textBleeding.text = "Heal";
             onguent.GetComponentInChildren<MeshRenderer>().material = flicker;
+            //cutSign.canFire = false;
             //bloodParticle2.SetActive(true);
             //bloodParticle1.SetActive(false);
         }
