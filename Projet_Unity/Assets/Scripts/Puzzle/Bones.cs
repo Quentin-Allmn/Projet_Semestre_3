@@ -45,7 +45,7 @@ public class Bones : MonoBehaviour
         {
 
             Vector3 mousePos = Input.mousePosition;
-            mousePos.z = posZ;
+            mousePos.z = posZ - 10;
             Vector3 position = Camera.main.ScreenToWorldPoint(mousePos);
 
             transform.position = position;
