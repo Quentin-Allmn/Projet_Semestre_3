@@ -101,7 +101,11 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
+<<<<<<< Updated upstream
   controlID: 120
+=======
+  controlID: 95
+>>>>>>> Stashed changes
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -300,7 +304,11 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
+<<<<<<< Updated upstream
   controlID: 110
+=======
+  controlID: 94
+>>>>>>> Stashed changes
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -325,7 +333,11 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
+<<<<<<< Updated upstream
   controlID: 111
+=======
+  controlID: 139
+>>>>>>> Stashed changes
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -542,9 +554,15 @@ MonoBehaviour:
     m_IsLocked: 1
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< Updated upstream
     m_SelectedIDs: 385f0000
     m_LastClickedID: 24376
     m_ExpandedIDs: 00000000285f000000ca9a3b
+=======
+    m_SelectedIDs: d25d0000
+    m_LastClickedID: 24018
+    m_ExpandedIDs: 00000000c45d000000ca9a3b
+>>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -572,7 +590,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< Updated upstream
     m_ExpandedIDs: 00000000285f0000
+=======
+    m_ExpandedIDs: 00000000c45d0000
+>>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -700,9 +722,13 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 205e0000
       m_LastClickedID: 0
+<<<<<<< Updated upstream
       m_ExpandedIDs: 6e6affff306bffff6071ffff907effff087fffffe081ffffb283ffff0286ffff1286ffff5c94ffffce94ffffd496ffff1498ffff38c5ffff04c6ffff42c6ffff68c9ffff60caffff90caffff96caffffc8cbffff62ceffff4ed6ffff60ddffff60f1ffff90f1ffffd4f1fffffef1ffff10f2ffff4ef2ffff7ef8ffff16fbffff767b0000
+=======
+      m_ExpandedIDs: 1afbffff
+>>>>>>> Stashed changes
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: Bone (1)
@@ -986,7 +1012,11 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: -0.56594175, y: 2.1016247, z: -7.094483}
     speed: 2
+<<<<<<< Updated upstream
     m_Value: {x: -0.56594175, y: 2.1016247, z: -7.094483}
+=======
+    m_Value: {x: 0.41069385, y: 0.94736135, z: 3.5715022}
+>>>>>>> Stashed changes
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1035,11 +1065,19 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.20100227, y: 0.033788186, z: -0.006938876, w: 0.97899854}
     speed: 2
+<<<<<<< Updated upstream
     m_Value: {x: 0.20098864, y: 0.03525612, z: -0.0072402637, w: 0.97893214}
+=======
+    m_Value: {x: -0.13321243, y: -0.05438274, z: 0.0073425146, w: -0.9896057}
+>>>>>>> Stashed changes
   m_Size:
     m_Target: 3.0403814
     speed: 2
+<<<<<<< Updated upstream
     m_Value: 3.0403814
+=======
+    m_Value: 3.29866
+>>>>>>> Stashed changes
   m_Ortho:
     m_Target: 0
     speed: 2
