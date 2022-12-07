@@ -2007,6 +2007,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 306356142933050720, guid: 68167653094a91943ad7b5700adb696b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 602222077960020708, guid: 68167653094a91943ad7b5700adb696b, type: 3}
       propertyPath: m_Name
       value: Onguent
@@ -2014,6 +2018,10 @@ PrefabInstance:
     - target: {fileID: 602222077960020708, guid: 68167653094a91943ad7b5700adb696b, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 602222077960020708, guid: 68167653094a91943ad7b5700adb696b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4829497160674630867, guid: 68167653094a91943ad7b5700adb696b, type: 3}
       propertyPath: m_RootOrder
@@ -2073,6 +2081,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6617273162025880834, guid: 68167653094a91943ad7b5700adb696b, type: 3}
       propertyPath: light
+      value: 
+      objectReference: {fileID: 1494042545}
+    - target: {fileID: 6617273162025880834, guid: 68167653094a91943ad7b5700adb696b, type: 3}
+      propertyPath: lightOnguent
       value: 
       objectReference: {fileID: 1494042545}
     m_RemovedComponents: []
@@ -2697,8 +2709,6 @@ MonoBehaviour:
   textBleeding: {fileID: 18425690}
   wood: {fileID: 2100000, guid: a57da0b7c61e37342ae6b78c07f9306f, type: 2}
   flicker: {fileID: 2100000, guid: de1356b1bb3bc944993cd1b3f2ab4999, type: 2}
-  bloodParticle1: {fileID: 0}
-  bloodParticle2: {fileID: 0}
   bleedingCount: 0
   ointmentCount: 0
   bleedingFinished: 0
@@ -3848,10 +3858,26 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.38004348
       objectReference: {fileID: 0}
+    - target: {fileID: 7140940715879952905, guid: c2809f0c8627aec4dbca751842019079, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7266948216853188612, guid: c2809f0c8627aec4dbca751842019079, type: 3}
       propertyPath: m_Name
       value: KingArm
       objectReference: {fileID: 0}
+    - target: {fileID: 7266948216853188612, guid: c2809f0c8627aec4dbca751842019079, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7858432485393803667, guid: c2809f0c8627aec4dbca751842019079, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8017926897189333277, guid: c2809f0c8627aec4dbca751842019079, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e5cb7aada585fd646aa56a31202343bb, type: 2}
     - target: {fileID: 8203878996429211691, guid: c2809f0c8627aec4dbca751842019079, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -3908,7 +3934,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8593837230770340939, guid: c2809f0c8627aec4dbca751842019079, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c2809f0c8627aec4dbca751842019079, type: 3}
 --- !u!1001 &5751173440676524534
 PrefabInstance:
@@ -3920,6 +3947,10 @@ PrefabInstance:
     - target: {fileID: 4832692341236096044, guid: b0fdbdf687a917d468e9fd109acd2004, type: 3}
       propertyPath: m_Name
       value: Scalpel (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832692341236096044, guid: b0fdbdf687a917d468e9fd109acd2004, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5213757390109836950, guid: b0fdbdf687a917d468e9fd109acd2004, type: 3}
       propertyPath: m_RootOrder
