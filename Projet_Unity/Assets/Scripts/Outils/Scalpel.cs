@@ -35,6 +35,16 @@ public class Scalpel : MonoBehaviour
         //{
         //    isActive = false;
         //}
+
+        if (isActive == true)
+        {
+            GetComponent<Outline>().enabled = true;
+        }
+        else
+        {
+            GetComponent<Outline>().enabled = false;
+        }
+
     }
 
 }

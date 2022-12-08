@@ -110,9 +110,10 @@ GameObject:
   - component: {fileID: 7175748599871966128}
   - component: {fileID: 7520738681716918582}
   - component: {fileID: 6617273162025880834}
+  - component: {fileID: 8172549518948270915}
   m_Layer: 0
   m_Name: Onguent
-  m_TagString: Untagged
+  m_TagString: Tool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -208,5 +209,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3c7dc64fd4d653419c6d96e2eefd3d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lightOnguent: {fileID: 0}
   isOintment: 0
   counterOintment: 0
+--- !u!114 &8172549518948270915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602222077960020708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.43867922, g: 0.993873, b: 1, a: 1}
+  outlineWidth: 10
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []

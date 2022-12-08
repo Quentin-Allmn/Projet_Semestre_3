@@ -32,5 +32,15 @@ public class Onguent : MonoBehaviour
             isOintment = false;
             lightOnguent.gameObject.SetActive(true);
         }
+
+        if (isOintment == true)
+        {
+            GetComponent<Outline>().enabled = true;
+        }
+        else
+        {
+            GetComponent<Outline>().enabled = false;
+        }
+
     }
 }

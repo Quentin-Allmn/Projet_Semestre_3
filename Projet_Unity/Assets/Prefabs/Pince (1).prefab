@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 2667480627665302204}
   - component: {fileID: 7996427482330875069}
   - component: {fileID: 4565829479027942692}
+  - component: {fileID: 7629407487294561328}
   m_Layer: 0
   m_Name: Pince (1)
-  m_TagString: Untagged
+  m_TagString: Tool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,3 +114,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.056714118, y: 0.0019676243, z: 0.021211661}
   m_Center: {x: -0.008386533, y: -0.000000002447765, z: -0.002118909}
+--- !u!114 &7629407487294561328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4468757269157663593}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.4575472, g: 0.89490527, b: 1, a: 1}
+  outlineWidth: 10
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
