@@ -15,11 +15,16 @@ public class WoundFinal : MonoBehaviour
 
     Onguent Onguent;
 
+    [SerializeField] GameObject onguentParticules;
+    Vector3 pos;
+
     // Start is called before the first frame update
     void Start()
     {
         fractureSceneManager = FindObjectOfType<FractureSceneManager>();
         Onguent = FindObjectOfType<Onguent>();
+
+        pos = new Vector3(transform.position.x, transform.position.y, transform.position.z - 1);
     }
 
     private void OnMouseOver()
@@ -29,6 +34,9 @@ public class WoundFinal : MonoBehaviour
             Onguent.counterOintment += 1;
 
             isChanged = true;
+
+            var Cut = Instantiate(onguentParticules, pos, Quaternion.identity);
+            Destroy(Cut, 1);
 
             gameObject.GetComponent<MeshRenderer>().material = onguent;
 

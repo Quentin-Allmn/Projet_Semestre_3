@@ -305,6 +305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wound: {fileID: 2100000, guid: 0ea0aeb411bf7794c9454db6d606b5a0, type: 2}
   onguent: {fileID: 2100000, guid: 66b8aabaaf118d64190aa42ca5c1e5d3, type: 2}
+  onguentParticules: {fileID: 170784257437486261, guid: 1c7e9b12938b8604ebf1854c7ddf6ad1, type: 3}
 --- !u!136 &46141678
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1238,6 +1239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wound: {fileID: 2100000, guid: 0ea0aeb411bf7794c9454db6d606b5a0, type: 2}
   onguent: {fileID: 2100000, guid: 66b8aabaaf118d64190aa42ca5c1e5d3, type: 2}
+  onguentParticules: {fileID: 170784257437486261, guid: 1c7e9b12938b8604ebf1854c7ddf6ad1, type: 3}
 --- !u!136 &548836989
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1429,6 +1431,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wound: {fileID: 2100000, guid: 0ea0aeb411bf7794c9454db6d606b5a0, type: 2}
   onguent: {fileID: 2100000, guid: 66b8aabaaf118d64190aa42ca5c1e5d3, type: 2}
+  onguentParticules: {fileID: 170784257437486261, guid: 1c7e9b12938b8604ebf1854c7ddf6ad1, type: 3}
 --- !u!136 &688421930
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2102,6 +2105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wound: {fileID: 2100000, guid: 0ea0aeb411bf7794c9454db6d606b5a0, type: 2}
   onguent: {fileID: 2100000, guid: 66b8aabaaf118d64190aa42ca5c1e5d3, type: 2}
+  onguentParticules: {fileID: 170784257437486261, guid: 1c7e9b12938b8604ebf1854c7ddf6ad1, type: 3}
 --- !u!136 &902844699
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2499,6 +2503,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wound: {fileID: 2100000, guid: 0ea0aeb411bf7794c9454db6d606b5a0, type: 2}
   onguent: {fileID: 2100000, guid: 66b8aabaaf118d64190aa42ca5c1e5d3, type: 2}
+  onguentParticules: {fileID: 170784257437486261, guid: 1c7e9b12938b8604ebf1854c7ddf6ad1, type: 3}
 --- !u!136 &1478863997
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2873,6 +2878,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wound: {fileID: 2100000, guid: 0ea0aeb411bf7794c9454db6d606b5a0, type: 2}
   onguent: {fileID: 2100000, guid: 66b8aabaaf118d64190aa42ca5c1e5d3, type: 2}
+  onguentParticules: {fileID: 170784257437486261, guid: 1c7e9b12938b8604ebf1854c7ddf6ad1, type: 3}
 --- !u!136 &1566505049
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3070,6 +3076,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wound: {fileID: 2100000, guid: 0ea0aeb411bf7794c9454db6d606b5a0, type: 2}
   onguent: {fileID: 2100000, guid: 66b8aabaaf118d64190aa42ca5c1e5d3, type: 2}
+  onguentParticules: {fileID: 170784257437486261, guid: 1c7e9b12938b8604ebf1854c7ddf6ad1, type: 3}
 --- !u!136 &1632275216
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3188,6 +3195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wound: {fileID: 2100000, guid: 0ea0aeb411bf7794c9454db6d606b5a0, type: 2}
   onguent: {fileID: 2100000, guid: 66b8aabaaf118d64190aa42ca5c1e5d3, type: 2}
+  onguentParticules: {fileID: 170784257437486261, guid: 1c7e9b12938b8604ebf1854c7ddf6ad1, type: 3}
 --- !u!136 &1681978386
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3301,6 +3309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wound: {fileID: 2100000, guid: 0ea0aeb411bf7794c9454db6d606b5a0, type: 2}
   onguent: {fileID: 2100000, guid: 66b8aabaaf118d64190aa42ca5c1e5d3, type: 2}
+  onguentParticules: {fileID: 170784257437486261, guid: 1c7e9b12938b8604ebf1854c7ddf6ad1, type: 3}
 --- !u!136 &1724353755
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3640,6 +3649,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wound: {fileID: 2100000, guid: 0ea0aeb411bf7794c9454db6d606b5a0, type: 2}
   onguent: {fileID: 2100000, guid: 66b8aabaaf118d64190aa42ca5c1e5d3, type: 2}
+  onguentParticules: {fileID: 170784257437486261, guid: 1c7e9b12938b8604ebf1854c7ddf6ad1, type: 3}
 --- !u!136 &1786918373
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3806,6 +3816,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wound: {fileID: 2100000, guid: 0ea0aeb411bf7794c9454db6d606b5a0, type: 2}
   onguent: {fileID: 2100000, guid: 66b8aabaaf118d64190aa42ca5c1e5d3, type: 2}
+  onguentParticules: {fileID: 170784257437486261, guid: 1c7e9b12938b8604ebf1854c7ddf6ad1, type: 3}
 --- !u!136 &1935940542
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -15,7 +15,9 @@ public class Wound : MonoBehaviour
 
     Onguent Onguent;
 
+    [SerializeField] GameObject onguentParticules;
 
+    Vector3 pos;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,8 @@ public class Wound : MonoBehaviour
         miniGame1Manager = FindObjectOfType<MiniGame1Manager>();
         Onguent = FindObjectOfType<Onguent>();
         miniGame1Manager.isOintmentText = false;
+
+        pos = new Vector3(transform.position.x, transform.position.y, transform.position.z - 1);
     }
 
     private void OnMouseOver()
@@ -32,6 +36,9 @@ public class Wound : MonoBehaviour
             Onguent.counterOintment += 1;
 
             isChanged = true;
+
+            var Cut = Instantiate(onguentParticules, pos, Quaternion.identity);
+            Destroy(Cut, 1);
 
             gameObject.GetComponent<MeshRenderer>().material = onguent;
 

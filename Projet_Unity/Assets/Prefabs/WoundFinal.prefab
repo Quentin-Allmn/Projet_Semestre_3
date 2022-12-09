@@ -113,3 +113,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wound: {fileID: 2100000, guid: 0ea0aeb411bf7794c9454db6d606b5a0, type: 2}
   onguent: {fileID: 2100000, guid: 66b8aabaaf118d64190aa42ca5c1e5d3, type: 2}
+  onguentParticules: {fileID: 170784257437486261, guid: 1c7e9b12938b8604ebf1854c7ddf6ad1, type: 3}
