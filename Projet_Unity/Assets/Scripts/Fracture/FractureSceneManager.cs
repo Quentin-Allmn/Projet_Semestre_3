@@ -18,9 +18,14 @@ public class FractureSceneManager : MonoBehaviour
     [SerializeField] Image victory;
     [SerializeField] Image defeat;
 
+    [SerializeField] Image imageMission;
+
     [SerializeField] GameObject cutLines;
 
-    [SerializeField] GameObject pliers; 
+    [SerializeField] GameObject pliers;
+
+    [SerializeField] ParticleSystem fireWorks;
+    private bool fireWorksStarts = false;
 
     public bool bleedingPhase = false;
     public bool puzzlePhase = false;
@@ -54,6 +59,8 @@ public class FractureSceneManager : MonoBehaviour
         cutSign = FindObjectOfType<CutSign>();
 
         timeFracture = timeMax;
+
+        
 
     }
 
@@ -106,6 +113,13 @@ public class FractureSceneManager : MonoBehaviour
         {
             victory.gameObject.SetActive(true);
             isWin = true;
+            KingLeg.SetActive(false);
+            woundFinal.SetActive(false);
+            if (fireWorksStarts == false)
+            {
+                fireWorksStarts = true;
+                fireWorks.Play();
+            }
         }
 
         if (timeFracture <= 0 && isWin == false)
@@ -117,6 +131,12 @@ public class FractureSceneManager : MonoBehaviour
         float amount = (float)timeFracture / timeMax;
         bar.fillAmount = amount;
 
+    }
+
+    public void AcceptMission()
+    {
+        imageMission.gameObject.SetActive(false);
+        isPause = false;
     }
 
 }

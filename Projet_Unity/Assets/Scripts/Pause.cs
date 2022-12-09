@@ -24,13 +24,13 @@ public class Pause : MonoBehaviour
     public void ShowPauseMenu()
     {
         pauseMenu.gameObject.SetActive(true);
-        MiniGame1Manager.ispause = true;
+        MiniGame1Manager.isPause = true;
     }
 
     public void Back()
     {
         pauseMenu.gameObject.SetActive(false);
-        MiniGame1Manager.ispause = false;
+        MiniGame1Manager.isPause = false;
     }
 
 

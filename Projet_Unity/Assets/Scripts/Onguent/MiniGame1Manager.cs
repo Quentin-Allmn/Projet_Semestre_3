@@ -16,6 +16,8 @@ public class MiniGame1Manager : MonoBehaviour
     [SerializeField] Image victory;
     [SerializeField] Image defeat;
 
+    [SerializeField] Image imageMission;
+
     public int woundCount = 0;
 
 
@@ -26,7 +28,7 @@ public class MiniGame1Manager : MonoBehaviour
 
     private bool isWin = false;
 
-    public bool ispause = false;
+    public bool isPause = true;
 
     // Start is called before the first frame update
     void Start()
@@ -39,14 +41,13 @@ public class MiniGame1Manager : MonoBehaviour
     {
         if ( woundCount >= wounds.Count)
         {
-            Debug.Log("Victry");
 
             victory.gameObject.SetActive(true);
             background.gameObject.SetActive(true);
             isWin = true;
         }
 
-        if (ispause == false)
+        if (isPause == false && isWin == false)
         {
 
             infection += Time.deltaTime;
@@ -75,5 +76,9 @@ public class MiniGame1Manager : MonoBehaviour
 
     }
 
-
+    public void AcceptMission()
+    {
+        imageMission.gameObject.SetActive(false);
+        isPause = false;
+    }
 }

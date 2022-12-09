@@ -10,6 +10,7 @@ public class Cut : MonoBehaviour
     [SerializeField] Material wound;
     [SerializeField] Material onguent;
 
+    [SerializeField] GameObject cutParticle;
 
     private bool isWound = false;
   //  private bool isOintment = false;
@@ -19,12 +20,16 @@ public class Cut : MonoBehaviour
     Onguent Onguent;
 
     Scalpel scalpel;
+
+    Vector3 pos;
     // Start is called before the first frame update
     void Start()
     {
         fractureSceneManager = FindObjectOfType<FractureSceneManager>();
         Onguent = FindObjectOfType<Onguent>();
         scalpel = FindObjectOfType<Scalpel>();
+
+        pos = new Vector3(transform.position.x, transform.position.y, transform.position.z - 1);
     }
 
     private void OnMouseOver()
@@ -34,6 +39,9 @@ public class Cut : MonoBehaviour
             if (isWound == false)
             {
                 isWound = true;
+
+                var Cut = Instantiate(cutParticle, pos , Quaternion.identity);
+                Destroy(Cut, 1);
 
                 gameObject.GetComponent<MeshRenderer>().material = wound;
 

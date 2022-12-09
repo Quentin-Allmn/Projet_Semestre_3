@@ -16,6 +16,10 @@ public class SaigneeManager : MonoBehaviour
     [SerializeField] Image blood;
     [SerializeField] Sprite redBar;
 
+
+    [SerializeField] Image imageMission;
+
+
     [SerializeField] Text textBleeding;
 
     [SerializeField] Material wood;
@@ -41,7 +45,7 @@ public class SaigneeManager : MonoBehaviour
 
     private bool isWin = false;
 
-    public bool isPause = false;
+    public bool isPause = true;
     private void Start()
     {
         timeOintment = timeMax / 2;
@@ -115,5 +119,9 @@ public class SaigneeManager : MonoBehaviour
 
     }
 
-
+    public void AcceptMission()
+    {
+        imageMission.gameObject.SetActive(false);
+        isPause = false;
+    }
 }
