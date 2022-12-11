@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2158932694780620087}
   - component: {fileID: 2158932694780620040}
   - component: {fileID: 2158932694780620041}
-  - component: {fileID: 2158932694780620086}
   - component: {fileID: 4926457060792260946}
+  - component: {fileID: 7189688110327377986}
   m_Layer: 0
   m_Name: WoundFinal
   m_TagString: Untagged
@@ -85,20 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &2158932694780620086
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2158932694780620084}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4926457060792260946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,3 +100,16 @@ MonoBehaviour:
   wound: {fileID: 2100000, guid: 0ea0aeb411bf7794c9454db6d606b5a0, type: 2}
   onguent: {fileID: 2100000, guid: 66b8aabaaf118d64190aa42ca5c1e5d3, type: 2}
   onguentParticules: {fileID: 170784257437486261, guid: 1c7e9b12938b8604ebf1854c7ddf6ad1, type: 3}
+--- !u!65 &7189688110327377986
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2158932694780620084}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 2.0000005, z: 3.7344618}
+  m_Center: {x: 0, y: -0, z: 0.3669869}
