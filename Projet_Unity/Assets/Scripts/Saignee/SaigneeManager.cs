@@ -15,6 +15,7 @@ public class SaigneeManager : MonoBehaviour
     [SerializeField] Image bar;
     [SerializeField] Image blood;
     [SerializeField] Sprite redBar;
+    [SerializeField] Sprite greenBar;
 
 
     [SerializeField] Image imageMission;
@@ -46,9 +47,11 @@ public class SaigneeManager : MonoBehaviour
     private bool isWin = false;
 
     public bool isPause = true;
+
+    private bool isLost = false;
     private void Start()
     {
-        timeOintment = timeMax / 2;
+        timeOintment = 18f;
         timeBleeding = timeMax;
 
         onguent = FindObjectOfType<Onguent>();
@@ -70,15 +73,7 @@ public class SaigneeManager : MonoBehaviour
             cutSign.canFire = false;
         }
 
-        if (ointmentCount == listBleeding.Count)
-        {
-            ointmentFinished = true;
-            victory.gameObject.SetActive(true);
-            //bloodParticle2.SetActive(false);
-            isWin = true;
-        }
-
-        if (bleedingCount > 0)
+        if (bleedingCount > 0 && isLost == false)
         {
             if(isWin == false && isPause == false)
             {
@@ -94,13 +89,7 @@ public class SaigneeManager : MonoBehaviour
         {
             //Debug.Log("Faut Heal");
             bleedingFinished = true;
-            bar.sprite = redBar;
-            blood.color = new Color(150, 0, 0);
-            textBleeding.text = "Heal";
             onguent.GetComponentInChildren<MeshRenderer>().material = flicker;
-            //cutSign.canFire = false;
-            //bloodParticle2.SetActive(true);
-            //bloodParticle1.SetActive(false);
         }
 
         if (timeBleeding < timeOintment - 0.5)
@@ -108,14 +97,39 @@ public class SaigneeManager : MonoBehaviour
             onguent.GetComponentInChildren<MeshRenderer>().material = wood;
         }
 
-        if (timeBleeding <= 0 && isWin == false)
-        {
-            defeat.gameObject.SetActive(true);
-        }
-
         timeBleeding = Mathf.Clamp(timeBleeding, 0, timeMax);
         float amount = (float)timeBleeding / timeMax;
         bar.fillAmount = amount;
+
+        if (amount < 0.6f && amount > 0.290f)
+        {
+            Debug.Log("UI");
+            bar.sprite = greenBar;
+            blood.color = new Color(44, 222, 114);
+        }
+        else if (amount < 0.290f)
+        {
+            bar.sprite = redBar;
+            blood.color = new Color(150, 0, 0);
+        }
+
+        if (ointmentCount == listBleeding.Count && amount > 0.290f)
+        {
+            ointmentFinished = true;
+            victory.gameObject.SetActive(true);
+            //bloodParticle2.SetActive(false);
+            isWin = true;
+        }
+        else if (ointmentCount == listBleeding.Count && amount < 0.290f)
+        {
+            defeat.gameObject.SetActive(true);
+            isLost = true;
+        }
+
+        if (timeBleeding <= 0 && isWin == false )
+        {
+            defeat.gameObject.SetActive(true);
+        }
 
     }
 
