@@ -20,6 +20,8 @@ public class MiniGame1Manager : MonoBehaviour
 
     public int woundCount = 0;
 
+    [SerializeField] ParticleSystem fireWorks;
+    private bool fireWorksStarts = false;
 
     public float infection = 0f;
 
@@ -45,6 +47,11 @@ public class MiniGame1Manager : MonoBehaviour
             victory.gameObject.SetActive(true);
             background.gameObject.SetActive(true);
             isWin = true;
+            if (fireWorksStarts == false)
+            {
+                fireWorksStarts = true;
+                fireWorks.Play();
+            }
         }
 
         if (isPause == false && isWin == false)
