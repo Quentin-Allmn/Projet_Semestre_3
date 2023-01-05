@@ -24,7 +24,7 @@ public class Wound : MonoBehaviour
     {
         miniGame1Manager = FindObjectOfType<MiniGame1Manager>();
         Onguent = FindObjectOfType<Onguent>();
-        miniGame1Manager.isOintmentText = false;
+        //miniGame1Manager.isOintmentText = false;
 
         pos = new Vector3(transform.position.x, transform.position.y, transform.position.z - 1);
     }
@@ -44,12 +44,12 @@ public class Wound : MonoBehaviour
 
             miniGame1Manager.woundCount += 1;
 
-            miniGame1Manager.isOintmentText = false;
+            //miniGame1Manager.isOintmentText = false;
         }
 
         if (Onguent.isOintment == false)
         {
-            miniGame1Manager.isOintmentText = true;
+           // miniGame1Manager.isOintmentText = true;
         }
 
     }

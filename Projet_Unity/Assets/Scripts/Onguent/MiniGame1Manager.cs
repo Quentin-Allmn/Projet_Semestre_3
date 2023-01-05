@@ -25,8 +25,8 @@ public class MiniGame1Manager : MonoBehaviour
 
     public float infection = 0f;
 
-    [SerializeField] Text ointmentTxt;
-    public bool isOintmentText = false;
+   // [SerializeField] Text ointmentTxt;
+    //public bool isOintmentText = false;
 
     private bool isWin = false;
 
@@ -72,14 +72,14 @@ public class MiniGame1Manager : MonoBehaviour
             background.gameObject.SetActive(true);
         }
 
-        if (isOintmentText == true)
-        {
-            ointmentTxt.gameObject.SetActive(true);
-        }
-        else if (isOintmentText == false)
-        {
-            ointmentTxt.gameObject.SetActive(false);
-        }
+        //if (isOintmentText == true)
+        //{
+        //    ointmentTxt.gameObject.SetActive(true);
+        //}
+        //else if (isOintmentText == false)
+        //{
+        //    ointmentTxt.gameObject.SetActive(false);
+        //}
 
     }
 
