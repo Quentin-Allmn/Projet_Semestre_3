@@ -11,15 +11,16 @@ public class Operation03 : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (isFinished == false)
+        if (PlayerPrefs.GetString("Op03") != "true")
         {
+            PlayerPrefs.SetString("Op03", "true");
             SceneManager.LoadSceneAsync(indexScene);
         }
     }
 
     private void Update()
     {
-        if (isFinished == true)
+        if (PlayerPrefs.GetString("Op03") == "true")
         {
             gameObject.SetActive(false);
         }

@@ -49,6 +49,9 @@ public class SaigneeManager : MonoBehaviour
     public bool isPause = true;
 
     private bool isLost = false;
+
+    public Operation02 operation02;
+
     private void Start()
     {
         timeOintment = 18f;
@@ -58,6 +61,7 @@ public class SaigneeManager : MonoBehaviour
 
         cutSign = FindObjectOfType<CutSign>();
         cutSign.canFire = true;
+
     }
 
     

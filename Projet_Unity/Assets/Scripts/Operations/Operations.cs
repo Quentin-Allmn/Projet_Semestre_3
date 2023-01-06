@@ -12,8 +12,9 @@ public class Operations : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (isFinished == false)
+        if (PlayerPrefs.GetString("Op01") != "true")
         {
+            PlayerPrefs.SetString("Op01", "true");
             SceneManager.LoadSceneAsync(indexScene);
         }
     }
@@ -21,9 +22,12 @@ public class Operations : MonoBehaviour
 
     private void Update()
     {
-        if (isFinished == true)
+        if (PlayerPrefs.GetString("Op01") == "true")
         {
             gameObject.SetActive(false);
         }
     }
+
+
+
 }

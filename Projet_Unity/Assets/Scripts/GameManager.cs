@@ -18,16 +18,18 @@ public class GameManager : MonoBehaviour
         operations = FindObjectOfType<Operations>();
         operations2 = FindObjectOfType<Operation02>();
         operations3 = FindObjectOfType<Operation03>();
+
+        Debug.Log(PlayerPrefs.GetString("Op03"));
     }
 
     private void Update()
     {
-
-        if (operations.isFinished == true && operations2.isFinished == true && operations3.isFinished == true)
+        
+        if (PlayerPrefs.GetString("Op01") == "true" && PlayerPrefs.GetString("Op02") == "true" && PlayerPrefs.GetString("Op03") == "true")
         {
             victoryImg.gameObject.SetActive(true);
         }
-        
+
     }
 
 }
