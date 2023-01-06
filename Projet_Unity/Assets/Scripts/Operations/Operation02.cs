@@ -9,11 +9,19 @@ public class Operation02 : MonoBehaviour
 
     public bool isFinished = false;
 
-    private void OnMouseOver()
+    private void OnMouseDown()
     {
         if (isFinished == false)
         {
             SceneManager.LoadSceneAsync(indexScene);
+        }
+    }
+
+    private void Update()
+    {
+        if (isFinished == true)
+        {
+            gameObject.SetActive(false);
         }
     }
 

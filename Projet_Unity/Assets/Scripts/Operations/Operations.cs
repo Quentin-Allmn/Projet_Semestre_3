@@ -10,7 +10,7 @@ public class Operations : MonoBehaviour
 
     public bool isFinished = false;
 
-    private void OnMouseOver()
+    private void OnMouseDown()
     {
         if (isFinished == false)
         {
@@ -18,4 +18,12 @@ public class Operations : MonoBehaviour
         }
     }
 
+
+    private void Update()
+    {
+        if (isFinished == true)
+        {
+            gameObject.SetActive(false);
+        }
+    }
 }
